@@ -40,12 +40,13 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Error"
+                $ref: "#/components/schemas/ErrorMessage"
 
 components:
   schemas:
     Company:
       type: object
+      additionalProperties: false
       properties:
         id:
           type: integer
@@ -53,8 +54,9 @@ components:
           type: string
         description:
           type: string
-    Error:
+    ErrorMessage:
       type: object
+      additionalProperties: false
       properties:
         error:
           type: string

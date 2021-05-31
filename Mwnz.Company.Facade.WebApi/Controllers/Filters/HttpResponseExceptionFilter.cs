@@ -19,7 +19,7 @@ namespace Mwnz.Company.Facade.WebApi.Controllers.Filters
             {
                 CompanyXmlApiException apiException = (CompanyXmlApiException)context.Exception;
                 context.Result = new ObjectResult(
-                        new Error { Error1 = apiException.StatusCode.ToString(), Error_description = apiException.Response }
+                        new ErrorMessage { Error = apiException.StatusCode.ToString(), Error_description = apiException.Response }
                     )
                 {
                     StatusCode = apiException.StatusCode,
