@@ -14,7 +14,7 @@ The Open API spec is in the project.
 
 # Build and Test
 
-To build the docker image, run the following;
+To build the docker image, run the following;  test
 ```
 docker build -t companyapifacade .
 ```
